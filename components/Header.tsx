@@ -7,7 +7,7 @@ import { HiHome } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
 import Button from "./Button";
 import { toast } from "react-hot-toast";
-import useAuthModel from "@/hooks/useAuthModel";
+import useAuthModal from "@/hooks/useAuthModal";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { useUser } from "@/hooks/useUser";
 import { FaUserAlt } from "react-icons/fa";
@@ -23,7 +23,7 @@ const Header: React.FC<HeaderProps> = ({
 }) => {
 
     // connecting the authentication modal
-    const authModal = useAuthModel();
+    const authModal = useAuthModal();
     const router = useRouter();
     const supabaseClient = useSupabaseClient();
     const { user } = useUser();
